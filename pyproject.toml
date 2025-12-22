@@ -1,0 +1,17 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "voice-transcribe"
+version = "0.1.0"
+description = "Personal CLI tool to transcribe audio files using OpenAI Whisper"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "openai-whisper",
+    "ffmpeg"
+]
+
+[project.scripts]
+transcribe = "voice_transcribe.cli:main"

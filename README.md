@@ -4,7 +4,7 @@
 
 Turn long audio into text from your terminal — fast setup, simple commands, no UI needed.
 
-This is a student-friendly CLI wrapper around **OpenAI Whisper** that helps you transcribe:
+This is a student-friendly CLI tool using **OpenAI Whisper** that helps you transcribe:
 - lecture recordings
 - voice memos
 - meetings / interviews

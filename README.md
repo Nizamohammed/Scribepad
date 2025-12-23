@@ -1,26 +1,134 @@
-# voice-transcribe
+# 🎙️ voice-transcribe
 
-A simple CLI tool that transcribes audio files (m4a/mp3/wav) using OpenAI Whisper.
+Turn long audio into text from your terminal — fast setup, simple commands, no UI needed.
 
-## Requirements
-- Python 3.10+
-- ffmpeg
+This is a student-friendly CLI wrapper around **OpenAI Whisper** that helps you transcribe:
+- lecture recordings
+- voice memos
+- meetings / interviews
+- “I’ll write notes later” moments 😅
 
-### Install ffmpeg (macOS)
+> ⚡ Current goal: get a reliable transcription tool out now.  
+> 🧠 Future goal: evolve this into a full student notes workflow (better structure, timing, performance, features).
+
+---
+
+## ✅ What this tool does (Currently)
+
+- Transcribes common audio formats: `.m4a`, `.mp3`, `.wav`, etc.
+- Saves output to a `.txt` file automatically (or to your chosen path)
+- Lets you pick a Whisper model (accuracy vs speed)
+
+---
+
+## 🧩 Requirements
+
+### 1) Python
+- **Python 3.10+** recommended
+
+Check:
+```bash
+python3 --version
 ```
+### 2) ffmpeg
+
+#### MacOS (Homebrew)
+```bash
 brew install ffmpeg
 ```
-
-## Install (recommended)
-Use pipx so it installs in an isolated environment and exposes the `transcribe` command globally:
+#### Ubentu/Debian
+```bash
+sudo apt update && sudo apt install ffmpeg
 ```
-pipx install git+https://github.com/<YOUR_USERNAME>/voice-transcribe.git
+#### Windows
+Install ffmpeg and make sure it’s on PATH. (Windows support docs coming later.)
+
+---
+
+## 🚀 Installation
+### Install pipx
+```bash
+python3 -m pip install --user pipx
+python3 -m pipx ensurepath
+```
+Restart your terminal (or open a new one)
+
+### Install this tool from GitHub
+```bash
+pipx install git+https://github.com/Nizamohammed/Voice-Transcribe.git
+```
+✅ After installing, you should have a global command:
+```bash
+transcribe --help
 ```
 
-## Usage
-transcribe input.m4a
-transcribe input.m4a output.txt
-transcribe input.m4a output.txt turbo
+---
 
-## Models
-tiny, base, small, medium, large, turbo
+## 🎛️ Usage
+### Basic
+```bash
+transcribe lecture.m4a
+```
+this will create:
+lecture_transcription.txt in the current directory
+
+### Choose output file
+```bash
+transcribe lecture.m4a notes.txt
+```
+
+### Choose model (speed vs accuracy)
+```bash
+transcribe lecture.m4a notes.txt turbo
+```
+
+---
+
+## 🧠 Model choices (how to pick)
+
+### Whisper models trade speed for accuracy:
+- **tiny** → fastest, lowest accuracy
+- **base / small** → decent for quick drafts
+- **medium / large** → best accuracy, slower
+- **turbo** → usually a great balance (default)
+
+If you're unsure, start with:
+```bash
+transcribe lecture.m4a notes.txt turbo
+```
+
+---
+
+## 🛣️ Future Roadmap 
+
+### This project is actively evolving. Ideas I’m exploring:
+
+- structured lecture notes output
+- faster processing + performance improvements
+- exporting to Markdown / PDF / Notion formats
+- speaker separation and cleanup tools
+
+---
+
+## 🤝 Contributing (students welcome)
+
+### If you’re a student and want to contribute:
+
+1. Fork the repo 
+2. Create a new branch
+3.	Submit a pull request
+
+Even small improvements (README fixes, bug reports, setup tips) help a lot :)
+
+---
+
+## 📜 License
+
+MIT License — use it, improve it, share it.
+
+---
+
+## ⭐ If this helped you
+
+Star the repo so other students can find it, and feel free to open an issue with feature ideas or bugs!
+

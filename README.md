@@ -1,3 +1,5 @@
+<img width="1056" height="520" alt="Gemini_Generated_Image_ev2kv9ev2kv9ev2k" src="https://github.com/user-attachments/assets/58bfb2c5-76d0-4b1f-9116-355d3e8060f8" />
+
 # 🎙️ voice-transcribe
 
 Turn long audio into text from your terminal — fast setup, simple commands, no UI needed.

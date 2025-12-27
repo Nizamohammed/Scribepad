@@ -22,6 +22,12 @@ This is a student-friendly CLI tool using **OpenAI Whisper** that helps you tran
 ```bash
 transcribe --help
 ```
+## 🧪 Demo audio
+
+### Quick demo (included)
+```bash
+transcribe samples/demo_short_28s.m4a
+```
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Nizamohammed/Voice-Transcribe)
 

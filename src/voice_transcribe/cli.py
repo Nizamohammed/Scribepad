@@ -9,7 +9,7 @@ import sys
 import os
 import argparse
 
-def transcribe_file(audio_path, output_path=None, model_size="turbo"):
+def transcribe_file(audio_path, output_path= None, model_size="turbo"):
     """
     Transcribe an audio file using Whisper
 
@@ -59,7 +59,7 @@ def transcribe_file(audio_path, output_path=None, model_size="turbo"):
 def main():
     parser = argparse.ArgumentParser(prog="transcribe", description="Transcribe audio using OpenAI Whisper")
     parser.add_argument("audio_file", help="Path to audio file (m4a, mp3, wav, etc.)")
-    parser.add_argument("output_path", default=None, help="Optional output-text file path")
+    parser.add_argument("output_path", nargs ="?", default=None, help="Optional output-text file path")
     parser.add_argument("model_size", nargs="?", default="turbo", help="Model size: tiny, base, small, medium, large, turbo (default: turbo)")
     args = parser.parse_args()
 
